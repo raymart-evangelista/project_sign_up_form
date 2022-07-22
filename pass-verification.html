@@ -28,7 +28,17 @@
       padding: 5px;
       border: 0.5px solid #E5E7EB;
       border-radius: 5px;
+      /* margin-bottom: 1rem; */
+    }
+    .no-span {
       margin-bottom: 1rem;
+    }
+
+    .error.active {
+      font-family: Arial, Helvetica, sans-serif;
+      content: "*Passwords do not match";
+      color: rgb(184, 0, 0);
+      font-size: 12px;
     }
 
     input:focus {
@@ -44,11 +54,53 @@
 </head>
 <body>
   <label for="first-name">first name</label>
-  <input type="email" name="email" id="email">
+  <input class="no-span" type="email" name="email" id="email">
   
   <label for="password">password</label>
   <input type="password" name="password" id="password" required>
+  <span class="error"></span>
+
   <label for="confirm-pass">confirm password</label>
-  <input type="password" name="confirm-pass" id="confirm-pass" required>
+  <input class="no-span" type="password" name="confirm-pass" id="confirm-pass" required>
+
+  <label for="last-name">last name</label>
+  <input class="no-span" type="text" name="last-name" id="last-name">
+  <script>
+    const pass = document.getElementById("password");
+    const passError = document.querySelector("#password + span.error")
+
+    const confirm_pass = document.getElementById("confirm-pass");
+
+    pass.addEventListener('input', function (event) {
+      if (pass.validity.valid) {
+        passError.textContent = '';
+        passError.className = 'error';
+      } else {
+        showError();
+      }
+    });
+
+    confirm_pass.addEventListener('input', function (event) {
+      if (confirm_pass.value != pass.value) {
+        showError();
+      }
+
+      if (confirm_pass.value == pass.value) {
+        passError.textContent = '';
+        passError.className = 'error';
+      }
+    })
+
+    function showError() {
+      if (pass.value != confirm_pass.value) {
+        passError.textContent = 'Passwords do not match';
+      } else if (pass.validity.valueMissing) {
+        passError.textContent = 'Please enter a password';
+      }
+
+      passError.className = 'error active';
+    }
+
+  </script>
 </body>
 </html>
