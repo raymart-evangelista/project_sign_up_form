@@ -10,7 +10,7 @@ body {
 
 #bg-img {
   /* width: clamp(500px, 100%, 1000px); */
-  width: max(500px, 100%);
+  width: max(33%, 100%);
 }
 
 #logo-container {
@@ -24,7 +24,7 @@ body {
   background: black;
   height: 15%;
   opacity: 0.6;
-  width: max(500px, 100%);
+  width: max(33%, 100%);
 }
 
 #logo-image {
@@ -64,6 +64,7 @@ body {
 #right-container {
   width: 67%;
   border: 5px solid blue;
+  background-color: rgb(242, 247, 252);
 }
 
 #top-text1, #top-text2 {
@@ -97,8 +98,43 @@ button, label, input {
 
 #info-container {
   border: 3px solid salmon;
+  background-color: white;
 }
 
 #button-area {
   border: 3px solid beige;
+}
+
+input[type=email] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #FDD;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }

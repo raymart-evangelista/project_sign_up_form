@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input, label {
+      display: block;
+    }
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      outline: none;
+      width: 10rem;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      font-size: 10px;
+      color: rgb(54, 54, 54);
+    }
+    
+    input {
+      padding: 5px;
+      border: 0.5px solid #E5E7EB;
+      border-radius: 5px;
+    }
+
+    input:focus {
+      border-color: rgb(122, 122, 255);
+      /* box-shadow from https://getcssscan.com/css-box-shadow-examples */
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  </style>
+</head>
+<body>
+  <label for="first-name">first name</label>
+  <input type="email" name="email" id="email">
+</body>
+</html>

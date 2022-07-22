@@ -21,7 +21,8 @@
       <div id="top-text2">You know you want to.</div>
     </div>
     <div id="bottom">
-      <form action="">
+      <!-- novalidate used to turn off browser automatic validation; let's script take control over validation -->
+      <form novalidate>
         <div id="info-container">
           <p>Let's do this!</p>
           <div class="form-row">
@@ -32,13 +33,15 @@
           </div>
           <div class="form-row">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="raymart@tangodating.com">
+            <input type="email" name="email" id="email" placeholder="raymart@tangodating.com" required>
+            <span class="error" aria-live="polite"></span>
             <label for="phone-number">Phone Number</label>
             <input type="text" name="phone-number" id="phone-number" placeholder="(123)-456-789">
           </div>
           <div class="form-row">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required minlength="1">
+            <span class="error" aria-live="polite"></span>
             <label for="confirm-password">Confirm Password</label>
             <input type="password" name="confirm-password" id="confirm-password">
           </div>
@@ -50,5 +53,6 @@
       </form>
     </div>    
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
