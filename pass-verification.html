@@ -34,10 +34,10 @@
       margin-bottom: 1rem;
     }
 
-    .error.active {
+    .error.active, input:invalid, input:invalid + span::before {
       font-family: Arial, Helvetica, sans-serif;
-      content: "*Passwords do not match";
       color: rgb(184, 0, 0);
+      border-color: rgb(184, 0, 0);
       font-size: 12px;
     }
 
@@ -47,8 +47,8 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    input:invalid {
-      border-color: rgb(184, 0, 0);
+    input:invalid + span::before {
+      content: "*Please enter a password. ";
     }
   </style>
 </head>
@@ -73,30 +73,46 @@
 
     pass.addEventListener('input', function (event) {
       if (pass.validity.valid) {
-        passError.textContent = '';
-        passError.className = 'error';
+        if (pass.value != confirm_pass.value) {
+          showConfirmError();
+        } else {
+          passError.textContent = '';
+          passError.className = 'error';
+        }
       } else {
-        showError();
+        showPassError();
       }
     });
 
     confirm_pass.addEventListener('input', function (event) {
       if (confirm_pass.value != pass.value) {
-        showError();
+        showConfirmError();
       }
 
       if (confirm_pass.value == pass.value) {
+        pass.setCustomValidity('');
         passError.textContent = '';
         passError.className = 'error';
       }
     })
 
-    function showError() {
-      if (pass.value != confirm_pass.value) {
-        passError.textContent = 'Passwords do not match';
-      } else if (pass.validity.valueMissing) {
-        passError.textContent = 'Please enter a password';
+    function showConfirmError() {
+      passError.textContent = 'Passwords do not match!';
+      passError.className = 'error active';
+    }
+
+    function showPassError() {
+      if (pass.validity.valueMissing) {
+        // passError.textContent = 'Please enter a password';
       }
+
+
+      // if (pass.value != confirm_pass.value) {
+      //   pass.setCustomValidity("invalid field");
+      //   passError.textContent = 'Passwords do not match';
+      // } else if (pass.validity.valueMissing) {
+      //   passError.textContent = 'Please enter a password';
+      // }
 
       passError.className = 'error active';
     }
