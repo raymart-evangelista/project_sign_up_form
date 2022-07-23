@@ -4,54 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Sign-Up Form</title>
+  <title>Homepage</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="left-container">
-    <img id="bg-img" src="background-image.jpg" alt="Photo of two people tangoing">
-    <div id="logo-container">
-      <div id="logo-image">tango</div>
-      <div id="logo-text">a refined dating experience.</div>
-    </div>
+  <div class="left-container">
+    <img class="image-fit" src="background-image.jpg" alt="">
+    <div class="logo-background"></div>
+    <div class="logo-name">tango</div>
+    <div class="logo-desc">against the grain.</div>
   </div>
-  <div id="right-container">
-    <div id="top-container">
-      <div id="top-text1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</div>
-      <div id="top-text2">You know you want to.</div>
-    </div>
-    <div id="bottom">
-      <!-- novalidate used to turn off browser automatic validation; let's script take control over validation -->
-      <form novalidate>
-        <div id="info-container">
-          <p>Let's do this!</p>
-          <div class="form-row">
-            <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name" placeholder="Raymart">
-            <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" id="last-name" placeholder="Evangelista">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="raymart@tangodating.com" required>
-            <span class="error" aria-live="polite"></span>
-            <label for="phone-number">Phone Number</label>
-            <input type="text" name="phone-number" id="phone-number" placeholder="(123)-456-789">
-          </div>
-          <div class="form-row">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required minlength="1">
-            <span class="error" aria-live="polite"></span>
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" name="confirm-password" id="confirm-password">
-          </div>
-        </div>
-        <div id="button-area">
-          <button>Create Account</button>
-          <p>Already have an account? Log in</p>
-        </div>
-      </form>
-    </div>    
+  <div class="right-container">
+    <div class="msg1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</div>
+    <div class="msg2">You know you want to.</div>
+    <form class="signup-form" action="" novalidate>
+      <div class="msg3">Let's do this!</div>
+
+    </form>
   </div>
   <script src="script.js"></script>
 </body>
