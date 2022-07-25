@@ -15,11 +15,56 @@
     <div class="logo-desc">against the grain.</div>
   </div>
   <div class="right-container">
-    <div class="msg1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</div>
-    <div class="msg2">You know you want to.</div>
+    <div class="top-area">
+      <div class="msg1">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</div>
+      <div class="msg2">You know you want to.</div>
+    </div>
     <form class="signup-form" action="" novalidate>
-      <div class="msg3">Let's do this!</div>
+      <div class="main-area">
+        <div class="msg3">Let's do this!</div>
 
+        <div class="labels-inputs">
+
+          <div class="info-col">
+            <div>
+              <label for="first-name">first name</label>
+              <input class="no-span" type="text" name="first-name" id="first-name">
+            </div>
+
+            <div>
+              <label for="email">email</label>
+              <input class="no-span" type="email" name="email" id="email">
+            </div>
+
+            <div>
+              <label for="password">password</label>
+              <input type="password" name="password" id="password" required>
+              <span class="yes-span error"></span>
+            </div>
+          </div>
+
+          <div class="info-col">
+            <div>
+              <label for="last-name">last name</label>
+              <input class="no-span" type="text" name="last-name" id="last-name">
+            </div>
+
+            <div>
+              <label for="phone">phone number</label>
+              <input type="text" name="phone" id="phone" class="no-span">
+            </div>
+
+            <div>
+              <label for="confirm-pass">confirm password</label>
+              <input class="no-span" type="password" name="confirm-pass" id="confirm-pass" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-area">
+        <button type="submit">Create Account</button>
+        <p class="login">Already have an account? <a href="https://github.com/raymart-evangelista">Log in</a></p>
+      </div>
     </form>
   </div>
   <script src="script.js"></script>

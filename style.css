@@ -5,13 +5,13 @@
 body {
   font-family:Arial, Helvetica, sans-serif;
   display: flex;
-  /* height: 100%; */
 }
 
 .left-container {
   position: relative;
   flex: 1 1 30%;
-  border: 5px solid blue;
+  /* width: 30%; */
+  /* border: 5px solid blue; */
 }
 
 .image-fit {
@@ -53,11 +53,136 @@ body {
 .right-container {
   position: relative;
   flex: 1 1 70%;
-  border: 5px solid red;
+  /* width: 70%; */
+  /* height: 100%; */
+  /* border: 5px solid red; */
   background-color: aliceblue;
 }
 
-.signup-form {
+.top-area {
+  /* height: 35%; */
+  padding: 7.5%
+}
+
+.main-area {
+  padding: 5%;
   background-color: white;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
+
+.labels-inputs {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+
+  /* gap: 30px; */
+}
+
+.bottom-area {
+  /* height: 35%; */
+  padding: 7.5%;
+}
+
+.msg3 {
+  width: 100%;
+  padding-bottom: 1rem;
+  /* flex-basis: 0 0 100%; */
+}
+
+input, button {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+label {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(54, 54, 54);
+}
+
+.no-span, .yes-span {
+  margin-bottom: 1rem;
+}
+
+.error.active, input:invalid, input:invalid + span::before {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(184, 0, 0);
+  border-color: rgb(184, 0, 0);
+  font-size: 12px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  padding: 15px;
+  width: 40%;
+  border: 0.5px solid #E5E7EB;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+input:focus {
+  border-color: rgb(122, 122, 255);
+  /* box-shadow from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input:invalid + span::before {
+  content: "*Please enter a password. ";
+}
+
+button {
+  padding: 12px;
+  width: 12rem;
+  border: none;
+  background-color: #596D48;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #596D48;
+  font-weight: bolder;
+}
+
+.login {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-col > div {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.main-area {
+  /* border: 5px solid blue; */
+}
+
+.msg3 {
+  /* border: 5px solid blue; */
+  font-size: 3em;
+
+}
+
+.labels-inputs {
+  /* border: 5px solid orange; */
+  display: flex;
+
+}
+.info-col {
+  /* border: 5px solid blue; */
+  width: 50%;
+}
+
