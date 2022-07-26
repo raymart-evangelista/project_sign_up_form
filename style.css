@@ -12,42 +12,60 @@ body {
   flex: 1 1 30%;
   /* width: 30%; */
   /* border: 5px solid blue; */
+  background-size: cover;
 }
 
 .image-fit {
-  width: max(150px, 100%);
-	height: max(150px, 100%);
+  /* width: max(150px, 100%); */
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  /* object-fit: contain; */
+  /* background-size: cover; */
+  /* border: 5px solid red; */
+
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+
+	/* height: max(150px, 100%); */
+    /* background-size: cover; */
 }
 
-.logo-background {
+.logo {
   background: black;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 15%;
-  opacity: 0.6;
+  background-color: rgba(0, 0, 0, .4);
   width: 100%;
-  transform: translate(0px, -600%);
+  top: 200px;
+  /* transform: translate(0px, -600%); */
+
   
 }
 
 .logo-name, .logo-desc {
   color: white;
-  position: absolute;
+
+  display: block;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
 }
 
 .logo-name {
-  font-size: 4vw;
-  font-weight: lighter;
-  top: 5.5vw;
-  left: 5vw;
+  font-size: 6vmin;
 }
 
 .logo-desc {
-  font-size: 1.5vw;
-  font-style: italic;
-  font-weight: lighter;
-  top: 7.3vw;
-  left: 15vw;
-
+  font-size:  2vmin;
 }
 
 .right-container {
@@ -86,6 +104,7 @@ body {
 .msg3 {
   width: 100%;
   padding-bottom: 1rem;
+  font-size: 3em;
   /* flex-basis: 0 0 100%; */
 }
 
@@ -111,7 +130,7 @@ label {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 0, 0);
   border-color: rgb(184, 0, 0);
-  font-size: 12px;
+  font-size: 20px;
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -130,14 +149,17 @@ input:focus {
 
 input:invalid + span::before {
   content: "*Please enter a password. ";
+  /* font-size: 20px; */
 }
 
 button {
-  padding: 12px;
-  width: 12rem;
+  padding: 10px;
+  width: 20rem;
+  height: 5rem;
   border: none;
   background-color: #596D48;
   color: white;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
@@ -158,6 +180,8 @@ a {
 
 .login {
   font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 2rem;
 }
 
 .info-col > div {
@@ -170,12 +194,6 @@ a {
   /* border: 5px solid blue; */
 }
 
-.msg3 {
-  /* border: 5px solid blue; */
-  font-size: 3em;
-
-}
-
 .labels-inputs {
   /* border: 5px solid orange; */
   display: flex;
@@ -186,3 +204,7 @@ a {
   width: 50%;
 }
 
+.msg1, .msg2 {
+  font-size: 40px;
+  padding: 1rem;
+}
